@@ -174,7 +174,7 @@ private object ChiselBridge {
     case IntModule(info, name, ports, intrinsic, params) =>
       // TODO: add proper intrinsic module support
       firrtl2.ir.ExtModule(convert(info), name, ports.map(convert), intrinsic, params.map(convert))
-    case Module(info, name, ports, body) =>
+    case Module(info, name, true, Seq(), ports, body) =>
       firrtl2.ir.Module(convert(info), name, ports.map(convert), convert(body))
 
   }

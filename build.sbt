@@ -2,17 +2,17 @@
 
 lazy val commonSettings = Seq(
   organization := "edu.berkeley.cs",
-  scalaVersion := "2.13.12",
-  crossScalaVersions := Seq("2.13.12")
+  scalaVersion := "2.13.14",
+  crossScalaVersions := Seq("2.13.11")
 )
 
-val chiselVersion = "6.0.0"
-val firrtlVersion = "6.0-SNAPSHOT"
+val chiselVersion = "7.0.0-M2"
+val firrtlVersion = "6.0.0"
 
 lazy val chiseltestSettings = Seq(
   name := "chiseltest",
   // we keep in sync with chisel version names
-  version := "6.0-SNAPSHOT",
+  version := "7.0-SNAPSHOT",
   scalacOptions := Seq(
     "-deprecation",
     "-feature",
